@@ -22,7 +22,7 @@ validate $? "Starting Mysql"
 #idempotency means for every run it will not consider newly once it is success and then rerun again it takes as failure
 #Since before is suucess and shells cript is not idempotent
 
-mysql -h db.bhavya.store -uroot -p${mysql_root_password} -e 'show databases;' &>>$logfile
+mysql -h db.bhavya.store -u root -p${mysql_root_password} -e 'show databases;' &>>$logfile
 if [ $? -eq 0 ]
 then    
     echo -e "Already password setup is completed..$Y Skipping $N"
