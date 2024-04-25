@@ -4,6 +4,9 @@ source ./Common.sh
 
 current_root
 
+echo "Pls enter DB pswwd"
+read -s mysql_root_password
+
 dnf module disable nodejs -y &>>$logfile
 validate $? "Disabling nodejs"
 
